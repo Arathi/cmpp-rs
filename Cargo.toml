@@ -1,0 +1,13 @@
+[package]
+name = "cmpp"
+version = "0.2603.0"
+edition = "2024"
+
+[lib]
+name = "cmpp_lib"
+
+[dependencies]
+actix-codec = "0.5.2"
+actix-server = "2.6.0"
+bytes = "1.11.1"
+tokio = { version = "1.50.0", features = ["full", "test-util"] }

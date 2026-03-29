@@ -1,0 +1,20 @@
+[package]
+name = "cmpp"
+version = "0.2603.28"
+edition = "2024"
+
+[lib]
+name = "cmpp_lib"
+
+[dependencies]
+actix-codec = "0.5.2"
+actix-server = "2.6.0"
+actix-web = "4.13.0"
+bytes = { version = "1.11.1", features = ["serde"] }
+chrono = { version = "0.4.44", features = ["serde"] }
+hex = { version = "0.4.3", features = ["serde"] }
+hex-literal = "1.1.0"
+md-5 = "0.11.0"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+thiserror = "2.0.18"

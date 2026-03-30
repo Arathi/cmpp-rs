@@ -73,6 +73,13 @@ impl Into<u32> for Timestamp {
     }
 }
 
+impl PartialEq<u32> for Timestamp {
+    fn eq(&self, other: &u32) -> bool {
+        let value: u32 = self.clone().into();
+        value == *other
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

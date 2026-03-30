@@ -1,6 +1,5 @@
 use actix_codec::{Decoder, Encoder};
-use actix_web::cookie::time;
-use bytes::{Buf, BufMut, BytesMut};
+use bytes::{BufMut, BytesMut};
 use cmpp_lib::codec::*;
 use cmpp_lib::pdu::command::*;
 use cmpp_lib::pdu::*;
@@ -28,8 +27,6 @@ fn test_encode_connect_request() {
 
     let mut dst = BytesMut::with_capacity(LENGTH);
     let _ = encoder.encode(packet, &mut dst);
-    // let mut bytes = [0u8; LENGTH];
-    // dst.copy_to_slice(&mut bytes);
     let bytes = &dst[..LENGTH];
     println!("{}", format_hex(&bytes, " ", true));
 }

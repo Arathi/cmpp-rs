@@ -13,7 +13,7 @@ pub struct ConnectResponsePayload {
 impl ConnectResponsePayload {
     pub fn generate_authenticator_ismg<S: Into<String>>(
         &mut self,
-        authenticator_source: [u8; 16],
+        authenticator_source: &[u8; 16],
         shared_secret: S,
     ) {
         // let input = [

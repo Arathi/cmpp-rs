@@ -1,6 +1,5 @@
 pub mod command;
 pub mod header;
-pub mod message;
 pub mod message_id;
 pub mod packet;
 pub mod payloads;

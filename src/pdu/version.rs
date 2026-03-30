@@ -32,6 +32,13 @@ impl Display for Version {
     }
 }
 
+impl PartialEq<u8> for Version {
+    fn eq(&self, other: &u8) -> bool {
+        let value: u8 = self.clone().into();
+        value == *other
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
